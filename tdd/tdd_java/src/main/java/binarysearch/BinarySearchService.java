@@ -3,7 +3,7 @@ package binarysearch;
 /**
  * Created by CamiloH on 1/4/2017.
  */
-public class BinarySearchService implements SearchService {
+final class BinarySearchService implements SearchService {
 
     private static SearchService INSTANCE;
 
