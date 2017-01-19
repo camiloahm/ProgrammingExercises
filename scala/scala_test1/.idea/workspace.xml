@@ -39,11 +39,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScalaProgram.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ScalaProgram.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scalaprogram/ScalaProgram.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
               <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Factorial.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/factorial/Factorial.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -90,6 +100,7 @@
         <option value="$PROJECT_DIR$/src/pure_and_impure/PlayerPure.scala" />
         <option value="$PROJECT_DIR$/src/pureandimpure/PlayerPure.scala" />
         <option value="$PROJECT_DIR$/src/scalaprogram/ScalaProgram.scala" />
+        <option value="$PROJECT_DIR$/src/factorial/Factorial.scala" />
       </list>
     </option>
   </component>
@@ -146,10 +157,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scalaprogram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -162,6 +169,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factorial" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -177,7 +188,7 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
-  <component name="RunManager" selected="Application.ScalaProgram">
+  <component name="RunManager" selected="Application.Factorial">
     <configuration default="false" name="Scala Console" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console" temporary="true">
       <module name="scala_test1" />
       <setting name="vmparams4" value="-Djline.terminal=NONE" />
@@ -233,6 +244,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="scalaprogram.ScalaProgram" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="scala_test1" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Factorial" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="factorial.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="factorial.Factorial" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -560,18 +591,20 @@
       <envs />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Scala Console.Scala Console" />
       <item index="1" class="java.lang.String" itemvalue="Application.HelloWorld" />
       <item index="2" class="java.lang.String" itemvalue="Application.PureAndImpure" />
       <item index="3" class="java.lang.String" itemvalue="Application.ScalaProgram" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Factorial" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.ScalaProgram" />
-        <item index="1" class="java.lang.String" itemvalue="Application.PureAndImpure" />
-        <item index="2" class="java.lang.String" itemvalue="Application.HelloWorld" />
-        <item index="3" class="java.lang.String" itemvalue="Scala Console.Scala Console" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.Factorial" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ScalaProgram" />
+        <item index="2" class="java.lang.String" itemvalue="Application.PureAndImpure" />
+        <item index="3" class="java.lang.String" itemvalue="Application.HelloWorld" />
+        <item index="4" class="java.lang.String" itemvalue="Scala Console.Scala Console" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
@@ -598,12 +631,12 @@
       <workItem from="1483498725329" duration="240000" />
       <workItem from="1484790136235" duration="86000" />
       <workItem from="1484791477272" duration="1778000" />
-      <workItem from="1484793351965" duration="3000000" />
+      <workItem from="1484793351965" duration="4396000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8818000" />
+    <option name="totallyTimeSpent" value="10214000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1604" height="876" extended-state="0" />
@@ -708,6 +741,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/factorial/Factorial.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
           <folding />
         </state>
       </provider>
