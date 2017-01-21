@@ -10,14 +10,6 @@ class Chapter2Test extends FreeSpec with Matchers {
 
   "test that fibo" - {
 
-    "test that fibo(1) is equal to 1" - {
-      assert(fibo(1) == 1)
-    }
-
-    "test that fibo(0) is equal to 0" - {
-      assert(fibo(0) == 0)
-    }
-
     def fibo(i: Int): Int = {
 
       def go(n: Int, previous: Int, actual: Int): Int = {
@@ -28,18 +20,24 @@ class Chapter2Test extends FreeSpec with Matchers {
       go(i, 0, 1)
     }
 
+    "test that fibo(1) is equal to 1" - {
+      fibo(1) should be (1)
+    }
+
+    "test that fibo(0) is equal to 0" - {
+      fibo(0) should be (0)
+    }
+
   }
 
 
   "test higher functions and lambda functions" - {
+    def formatResult(n: Int, name: String, f: Int => Int) ={
+      s"The $name of ${n} is ${f(n)}"
+    }
 
     val result=formatResult(5, "Increment", (x) => x + 1)
-    assert(result.equals("The Increment of 5 is 6"))
-
-    def formatResult(n: Int, name: String, f: Int => Int) {
-      val msg = "The %s of %d is %d"
-      msg.format(name, n, f(n))
-    }
+    result should be  ("The Increment of 5 is 6")
 
   }
 
