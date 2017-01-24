@@ -1,6 +1,8 @@
 package com.fpin
 
 import org.scalatest.{FreeSpec, Matchers}
+import scala.math.Ordering.Implicits._
+import scala.math.Ordered._
 
 /**
   * Created by dev-camiloh on 1/19/17.
@@ -73,6 +75,40 @@ class Chapter2Test extends FreeSpec with Matchers {
       binarySearch(Array(2, 3, 4, 5, 6, 7, 8, 9, 10), 11) should be(-1)
     }
   }
+
+
+  "Test generic binary search" - {
+
+    def genericBinarySearch[A](array: Array[A], key: A, f: (A, A) => Boolean): Int = {
+
+      def loop[A](low: Int, mid: Int, high: Int): Int = {
+        if (low > high) {
+          -1
+        } else {
+          val mid2 = (low + high) / 2
+          val a = array(mid2)
+          val greater = f(a, key)
+          if (!greater && !f(key, a)) {
+            mid2
+          } else {
+            if (greater) {
+              loop(low, mid2, mid2 - 1)
+            } else {
+              loop(mid2 + 1, mid2, high)
+            }
+          }
+        }
+      }
+
+      loop(0, 0, array.length - 1)
+    }
+
+    "Test that 6 is in index 4" - {
+      // genericBinarySearch(Array(2, 3, 4, 5, 6, 7, 8, 9, 10), 6, greaterThan) should be(4)
+    }
+  }
+  
+
 }
 
 
