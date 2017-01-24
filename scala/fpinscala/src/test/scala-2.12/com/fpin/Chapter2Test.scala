@@ -1,8 +1,6 @@
 package com.fpin
 
 import org.scalatest.{FreeSpec, Matchers}
-import scala.math.Ordering.Implicits._
-import scala.math.Ordered._
 
 /**
   * Created by dev-camiloh on 1/19/17.
@@ -104,10 +102,24 @@ class Chapter2Test extends FreeSpec with Matchers {
     }
 
     "Test that 6 is in index 4" - {
-      // genericBinarySearch(Array(2, 3, 4, 5, 6, 7, 8, 9, 10), 6, greaterThan) should be(4)
+      genericBinarySearch(Array(2, 3, 4, 5, 6, 7, 8, 9, 10), 6, (x1: Int, x2: Int) => x1 > x2) should be(4)
+      genericBinarySearch[Int](Array(2, 3, 4, 5, 6, 7, 8, 9, 10), 6, (x1, x2) => x1 > x2) should be(4)
     }
   }
-  
+
+  "Generic sum" - {
+    def sumValues[A](a: A, b: A)(implicit sum: (A, A) => A): A = sum(a, b)
+
+    implicit val sumInt = (a: Int, b: Int) => a + b
+    implicit val sumString = (a: String, b: String) => a + b
+    implicit val sumList = (a: Seq[Int], b: Seq[Int]) => a ++ b
+
+    sumValues(1,3) should be(4)
+    sumValues("hello", "world") should be("helloworld")
+    sumValues(Seq(1,2,3), Seq(4,5,6)) should be(Seq(1,2,3,4,5,6))
+    sumValues(Seq(1,2,3), Seq(4,5,6))(sumList) should be(Seq(1,2,3,4,5,6))
+  }
+
 
 }
 
