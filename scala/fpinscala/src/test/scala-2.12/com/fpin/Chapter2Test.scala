@@ -114,14 +114,55 @@ class Chapter2Test extends FreeSpec with Matchers {
     implicit val sumString = (a: String, b: String) => a + b
     implicit val sumList = (a: Seq[Int], b: Seq[Int]) => a ++ b
 
-    sumValues(1,3) should be(4)
+    sumValues(1, 3) should be(4)
     sumValues("hello", "world") should be("helloworld")
-    sumValues(Seq(1,2,3), Seq(4,5,6)) should be(Seq(1,2,3,4,5,6))
-    sumValues(Seq(1,2,3), Seq(4,5,6))(sumList) should be(Seq(1,2,3,4,5,6))
+    sumValues(Seq(1, 2, 3), Seq(4, 5, 6)) should be(Seq(1, 2, 3, 4, 5, 6))
+    sumValues(Seq(1, 2, 3), Seq(4, 5, 6))(sumList) should be(Seq(1, 2, 3, 4, 5, 6))
   }
 
 
+
+  "Test improve balance parenthesis" - {
+
+
+    def isBalanced(x: String): Boolean = {
+
+      def isChar(x: String, char: Char): Boolean = {
+        x.head == char
+      }
+
+      def loop(x: String, total: Int): Boolean = {
+        if (x.isEmpty) {
+          total == 0
+        } else {
+          if (isChar(x, '('))
+            loop(x.tail, total + 1)
+          else if (isChar(x, ')'))
+            total > 0 && loop(x.tail, total - 1)
+          else
+            loop(x.tail, total)
+        }
+      }
+
+      loop(x, 0)
+
+    }
+
+
+    "Test that (1+2) is well balanced" - {
+      isBalanced("(1+2)") should be(true)
+    }
+
+    "Test that ((1+2) is well balanced" - {
+      isBalanced("1+2)") should be(false)
+    }
+
+    "Test that )1+2) is well balanced" - {
+      isBalanced(")1+2)") should be(false)
+    }
+
+    "Test that (3+(1+2)) is well balanced" - {
+      isBalanced("(3+(1+2))") should be(true)
+    }
+  }
 }
-
-
-
