@@ -7,14 +7,4 @@ import org.scalatest.{FreeSpec, Matchers}
   */
 class Chapter3Test extends FreeSpec with Matchers {
 
-
-  "test pattern matcher" - {
-
-    def tail[A](l: List[A]): List[A] =
-      l match {
-        case Nil => sys.error("tail of empty list")
-        case Cons(_, t) => t
-      }
-
-  }
 }
