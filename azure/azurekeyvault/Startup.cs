@@ -41,14 +41,6 @@ namespace azurekeyvault
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            app.Run(async context =>
-            {
-                var encoding = new UTF8Encoding(encoderShouldEmitUTF8Identifier: false);
-                var document = string.Format(Configuration["MySecret"], Configuration["Section:MySecret"], Configuration.GetSection("Section")["MySecret"]);
-                context.Response.ContentLength = encoding.GetByteCount(document);
-                context.Response.ContentType = "text/html";
-                await context.Response.WriteAsync(document);
-            });
             app.UseMvc();
         }
     }
