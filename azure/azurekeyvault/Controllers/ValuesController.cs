@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,11 +7,13 @@ namespace azurekeyvault.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+
+
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return await EnvironmentSecretProvider.GetSecret("https://run-dev-kv.vault.azure.net/secrets/camilo/79e159a3ea5d44788bde363396f112ca");
         }
 
         // GET api/values/5
