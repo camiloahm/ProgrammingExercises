@@ -6,6 +6,7 @@
 [debug] 	validate = true
 [debug] 	refresh = false
 [debug] resolving dependencies for configuration 'default'
+[debug] no default cache defined: set to C:\Users\CamiloH\.ivy2\cache
 [debug] == resolving dependencies for default#fpinscala$sbt_2.12;1.0 [default]
 [debug] == resolving dependencies default#fpinscala$sbt_2.12;1.0->org.scala-sbt#sbt;0.13.8 [default->default(compile)]
 [info] Resolving org.scala-sbt#sbt;0.13.8 ...
@@ -703,9 +704,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.8!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8!apply-macro.jar
-[debug] :: resolution report :: resolve 2438ms :: artifacts dl 73ms
-[debug] 	report for default#fpinscala$sbt_2.12;1.0 default produced in /Users/dev-camiloh/Camilo/Data/Personal/Tests/github/bags-of-knowledge/scala/fpinscala/target/resolution-cache/reports/default-fpinscala$sbt_2.12-default.xml
-[debug] 	resolve done (2438ms resolve - 73ms download)
+[debug] :: resolution report :: resolve 432ms :: artifacts dl 30ms
+[debug] 	report for default#fpinscala$sbt_2.12;1.0 default produced in C:\Camilo\Dev\bags-of-knowledge\scala\fpinscala\target\resolution-cache\reports\default-fpinscala$sbt_2.12-default.xml
+[debug] 	resolve done (432ms resolve - 30ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#fpinscala$sources_2.12;1.0
 [debug] 	confs: [default]
@@ -1069,6 +1070,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.8!precompiled-2_8_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.8!precompiled-2_9_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.8!precompiled-2_9_3.jar(src)
-[debug] :: resolution report :: resolve 401ms :: artifacts dl 109ms
-[debug] 	report for default#fpinscala$sources_2.12;1.0 default produced in /Users/dev-camiloh/Camilo/Data/Personal/Tests/github/bags-of-knowledge/scala/fpinscala/target/resolution-cache/reports/default-fpinscala$sources_2.12-default.xml
-[debug] 	resolve done (401ms resolve - 109ms download)
+[debug] :: resolution report :: resolve 155ms :: artifacts dl 35ms
+[debug] 	report for default#fpinscala$sources_2.12;1.0 default produced in C:\Camilo\Dev\bags-of-knowledge\scala\fpinscala\target\resolution-cache\reports\default-fpinscala$sources_2.12-default.xml
+[debug] 	resolve done (155ms resolve - 35ms download)

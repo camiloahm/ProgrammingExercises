@@ -8,8 +8,10 @@ import scala.annotation.tailrec
 object Factorial {
 
   def main(args: Array[String]): Unit = {
-    print(factorial(3))
-    print(factorial(7))
+    println(factorial(3))
+    println(factorial(7))
+    println(factPatternMatcher(3))
+    println(factPatternMatcher(7))
   }
 
   private def factorial(n: Int): Int = {
@@ -22,4 +24,10 @@ object Factorial {
     go(n, 1)
   }
 
+  private def factPatternMatcher(i: Int): Int = {
+    i match {
+      case 0 => 1
+      case n => n * factPatternMatcher(n - 1)
+    }
+  }
 }
