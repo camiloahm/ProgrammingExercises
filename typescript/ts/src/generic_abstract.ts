@@ -14,7 +14,7 @@ class ConcreteClass {
 }
 
 class ConcreteWrongClass {
-    id: string;   // we can't use this class as T
+    id: number;   // we can't use this class as T
 }
 
 class Subclass1 extends BaseClass<ConcreteClass> {
