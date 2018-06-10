@@ -1,6 +1,8 @@
 package com.sparkTutorial.sparkSql;
 
 
+import org.apache.spark.sql.SparkSession;
+
 public class HousePriceProblem {
 
         /* Create a Spark program to read the house data from in/RealEstate.csv,
@@ -38,4 +40,7 @@ public class HousePriceProblem {
         |.............................................|
 
          */
+
+        SparkSession sparkSession=SparkSession.builder().appName("Solution").master("local[1]").getOrCreate();
+
 }
