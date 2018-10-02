@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sparkTutorial_main.iml" filepath="$PROJECT_DIR$/.idea/modules/sparkTutorial_main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sparkTutorial_main~1.iml" filepath="$PROJECT_DIR$/.idea/modules/sparkTutorial_main~1.iml" group="sparkTutorial" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sparkTutorial_test.iml" filepath="$PROJECT_DIR$/.idea/modules/sparkTutorial_test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sparkTutorial_test~1.iml" filepath="$PROJECT_DIR$/.idea/modules/sparkTutorial_test~1.iml" group="sparkTutorial" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sparkTutorial~1.iml" filepath="$PROJECT_DIR$/.idea/modules/sparkTutorial~1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sparkTutorial.iml" filepath="$PROJECT_DIR$/sparkTutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sparkTutorial_main.iml" filepath="$PROJECT_DIR$/.idea/modules/sparkTutorial_main.iml" group="sparkTutorial" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sparkTutorial_test.iml" filepath="$PROJECT_DIR$/.idea/modules/sparkTutorial_test.iml" group="sparkTutorial" />
     </modules>
   </component>
 </project>
